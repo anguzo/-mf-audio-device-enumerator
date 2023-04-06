@@ -34,7 +34,7 @@
                         <RadioButton
                             Margin="5"
                             Command="{Binding DataContext.SelectRecordingDeviceCommand, Mode=OneTime, RelativeSource={RelativeSource AncestorType={x:Type mfAudioDeviceEnumeratorNAudioWpfApp:MainWindow}}}"
-                            CommandParameter="{Binding Mode=OneTime}" Content="{Binding DisplayName}">
+                            CommandParameter="{Binding Mode=OneTime}" Content="{Binding FriendlyName}">
                             <RadioButton.IsChecked>
                                 <MultiBinding Converter="{StaticResource EqualityConverter}"
                                               Mode="OneWay">
@@ -90,7 +90,7 @@
                         <RadioButton
                             Margin="5"
                             Command="{Binding DataContext.SelectPlaybackDeviceCommand, Mode=OneTime, RelativeSource={RelativeSource AncestorType={x:Type mfAudioDeviceEnumeratorNAudioWpfApp:MainWindow}}}"
-                            CommandParameter="{Binding Mode=OneTime}" Content="{Binding DisplayName}">
+                            CommandParameter="{Binding Mode=OneTime}" Content="{Binding FriendlyName}">
                             <RadioButton.IsChecked>
                                 <MultiBinding Converter="{StaticResource EqualityConverter}"
                                               Mode="OneWay">

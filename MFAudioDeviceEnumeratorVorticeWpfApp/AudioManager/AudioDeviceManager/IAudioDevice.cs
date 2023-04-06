@@ -6,10 +6,9 @@ namespace MFAudioDeviceEnumeratorVorticeWpfApp.AudioManager.AudioDeviceManager
     public interface IAudioDevice : INotifyPropertyChanged, IDisposable
     {
         string Id { get; }
-        string DisplayName { get; }
+        string FriendlyName { get; }
+        string DeviceFriendlyName { get; }
         string IconPath { get; }
-        string InterfaceName { get; }
-        string DeviceDescription { get; }
         void DevicePropertiesChanged();
     }
 }
