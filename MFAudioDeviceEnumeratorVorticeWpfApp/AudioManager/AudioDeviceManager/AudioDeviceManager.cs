@@ -180,7 +180,7 @@ namespace MFAudioDeviceEnumeratorVorticeWpfApp.AudioManager.AudioDeviceManager
             // We're racing with the system, the device may not be resolvable anymore.
             try
             {
-                _dispatcher.Invoke(() => { device.DevicePropertiesChanged(); });
+                device.DevicePropertiesChanged();
             }
             catch (Exception ex)
             {
