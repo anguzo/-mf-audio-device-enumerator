@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using MFAudioDeviceEnumeratorVorticeWpfApp.AudioManager.AudioDeviceManager.Interop.Utilities;
+using SharpGen.Runtime;
 
 namespace MFAudioDeviceEnumeratorVorticeWpfApp.AudioManager.AudioDeviceManager.Extensions
 {
@@ -13,7 +14,7 @@ namespace MFAudioDeviceEnumeratorVorticeWpfApp.AudioManager.AudioDeviceManager.E
                 case HRESULT.AUDCLNT_E_DEVICE_INVALIDATED:
                 case HRESULT.AUDCLNT_S_NO_SINGLE_PROCESS:
                 case HRESULT.ERROR_NOT_FOUND:
-                    return (uint)(ex as COMException)?.HResult == (uint)type;
+                    return (uint)(ex as SharpGenException)?.HResult == (uint)type;
                 default:
                     throw new NotImplementedException();
             }

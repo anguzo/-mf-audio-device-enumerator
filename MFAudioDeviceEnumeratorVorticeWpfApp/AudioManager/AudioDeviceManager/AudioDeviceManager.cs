@@ -85,7 +85,7 @@ namespace MFAudioDeviceEnumeratorVorticeWpfApp.AudioManager.AudioDeviceManager
                 TryFind(rawDevice.Id, out var device);
                 return device;
             }
-            catch (Exception ex) when (ex.Is(HRESULT.ERROR_NOT_FOUND))
+            catch (SharpGenException ex) when (ex.Is(HRESULT.ERROR_NOT_FOUND))
             {
                 // Expected.
                 return null;

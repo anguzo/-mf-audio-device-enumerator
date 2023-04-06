@@ -16,6 +16,7 @@ namespace MFAudioDeviceEnumeratorNAudioWpfApp.AudioManager.AudioDeviceManager
         public AudioDevice(MMDevice device, Dispatcher foregroundDispatcher)
         {
             _device = device;
+            _device.GetPropertyInformation();
             Id = _device.ID;
             _dispatcher = foregroundDispatcher;
 
@@ -28,7 +29,7 @@ namespace MFAudioDeviceEnumeratorNAudioWpfApp.AudioManager.AudioDeviceManager
 
         public string Id { get; }
         public string FriendlyName => _device.FriendlyName;
-        public string DeviceFriendlyName => _device.FriendlyName;
+        public string DeviceFriendlyName => _device.DeviceFriendlyName;
         public string IconPath => _device.IconPath;
 
         public float Volume
